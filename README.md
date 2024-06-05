@@ -2,6 +2,8 @@
 
 Usage:
 
+In SimpleTest.java there are tests checking the functionality of the classes.
+
 You can use class ElevatorManagerAbstract and its implementation ElevatorManager. The functions you can use are defined in ElevatorManagerInterface and they are:
 
 void pickup(int floor, boolean direction); -- the button is pressed on the floor and its direction is false if person wants to go down and true if up
