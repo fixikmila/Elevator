@@ -49,8 +49,8 @@ public class User implements ObserverAssigner, ObserverUpdater {
         System.out.println("Assigned elevator " + elevator.getId() + " is now at floor " + current_floor);
     }
 
-    public void exitElevator(Elevator elevator) {
-        elevator.removeObserver(this);
+    public void exitElevator() {
+        elevator_manager.status().get(elevator_id).removeObserver(this);
     }
 
     @Override
@@ -63,10 +63,10 @@ public class User implements ObserverAssigner, ObserverUpdater {
         return direction;
     }
 
-    void pressButtonInElevator(ElevatorManager elevatorManager, int destination_floor) throws Exception {
+    void pressButtonInElevator(int destination_floor) throws Exception {
         if (!is_in_elevator) {
             throw new Exception("Not in elevator yet");
         }
-        elevatorManager.update(elevator_id, current_floor, destination_floor);
+        elevator_manager.update(elevator_id, current_floor, destination_floor);
     }
 }
