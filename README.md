@@ -12,7 +12,7 @@ void update(int id, int current_floor, int destination_floor) throws Exception; 
 
 void doSteps(int number); -- you can do number steps at one time (one step is when elevator can move for 0 or 1 floors up or down)
 
-ArrayList<Elevator> status(); -- it will return the list of elevators and it should be used in following way: getCurrentFloor() method tells us where this elevator currently is, getFloors() gives us a list of tuple and this tuple is the orders for this elevator: current_floor(from where it was called), destination_floor(to where), time_call_at_floor(and when it was called).
+ArrayList<Elevator> status(); -- it will return the list of elevators and it should be used in following way: getCurrentFloor() method tells us where this elevator currently is, getElevatorCalls() gives us a list of tuple and this tuple is the orders for this elevator: current_floor(from where it was called), destination_floor(to where), time_call_at_floor(and when it was called).
 
 void addObserver(User observerAssigner);
 
