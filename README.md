@@ -32,6 +32,6 @@ The elevator has 3 states:
 
 1. free -- it means this elevator is not called by anyone at this moment and it is not going anywhere. the function isFree() will return true only in this case
 2. called by someone and not reached him for now -- so it has first_request_floor variable equals to the floor it is going to.
-3. picked up some person and it is going in this direction -- so it has first_request_floor variable is null.
+3. picked up some person and it is going in the specified direction -- so it has first_request_floor variable is null.
 
 If a person press the button, we always can consider case 1. The other cases are considered only if our direction is equal to this elevator's direction, let's assume it is DOWN. Consider the case 2 when our current floor is lower or equal than first_request_floor(so it can pick up us when taking another person in this direction) and case 3 when the our current_floor is lower or equal than this elevator's current floor. If there are several possibility, we choose the nearest one. If no option is availible, then we put this person in the waiting list and in function step when we have available elevators, we can pick up this person(we start with the one who is waiting the most).
