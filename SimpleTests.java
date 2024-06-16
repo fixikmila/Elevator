@@ -24,7 +24,7 @@ class SimpleTests {
     class UserPressButtonQuery extends Query {
         @Override
         void doQuery() throws Exception {
-            user.pressButtonInElevator(elevatorManager, destination_floor);
+            user.pressButtonInElevator(destination_floor);
         }
 
         UserPressButtonQuery(int time, int destination_floor, User user) {
